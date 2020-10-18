@@ -7,10 +7,12 @@ namespace PhoneBook.Model
     class CompanyRecord : IRecord
     {
         public string Name { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Email { get; set; }
         public string KindOfActivity { get; set; }
         public PersonRecord Owner { get; set; }
-        
-        public Dictionary<string, string> GetExpandedInfo()
+
+        public string[] GetExpandedInfo()
         {
             throw new NotImplementedException();
         }
@@ -18,7 +20,7 @@ namespace PhoneBook.Model
         {
             throw new NotImplementedException();
         }
-        public bool IsAllowByFilter(FilterType filterType, string filter)
+        public bool IsAllowByFilter(Dictionary<FilterType, string> filters)
         {
             throw new NotImplementedException();
         }

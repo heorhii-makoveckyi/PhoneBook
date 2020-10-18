@@ -6,8 +6,11 @@ namespace PhoneBook.Model
 {
     interface IRecord
     {
-        public Dictionary<string, string> GetExpandedInfo();
-        public string[] GetGridInfo();
-        public bool IsAllowByFilter(FilterType filterType, string filter);
+        string Name { get; set; }
+        string PhoneNumber { get; set; }
+        string Email { get; set; }
+        string[] GetExpandedInfo();
+        string[] GetGridInfo();
+        bool IsAllowByFilter(Dictionary<FilterType, string> filters);
     }
 }
